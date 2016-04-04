@@ -16,11 +16,13 @@ util.inherits(CSSCharset, Transform);
 module.exports = CSSCharset;
 
 function CSSCharset(responseHeader) {
+    if (!(this instanceof CSSCharset)) return new CSSCharset(responseHeader);
+    
     var encoding = charset(responseHeader);
     
     Transform.call(this);
     
-    this._defaultCharset = defaultCharset;
+    this._defaultCharset = encoding;
     this._bufferArray = [];
     this._state = IN_CHARSET;
     this._charsetStartIndex = 0;

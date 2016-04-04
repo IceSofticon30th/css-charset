@@ -2,8 +2,13 @@ var CSSCharset = require('./index.js');
 
 var converter = CSSCharset('');
 converter.on('data', function (data) {
-    console.log(data.toString());
+    console.log('convert', data.toString());
 });
+
+function write(str) {
+    console.log('write', str);
+    converter.write(str);
+}
 
 function text() {
     write('@char');
@@ -13,19 +18,11 @@ function text() {
     write('Shi');
     write('f');
     write('t_JI');
-    write('S');
-    write("'");
-    write(';');
-    write('\nbody {\n\tbackground: red;\n}');
+    write("S'; body { background: red; }");
 }
 
 function file() {
     require('fs').createReadStream('./sample.css').pipe(converter);
 }
 
-file();
-
-function write(str) {
-    console.log('write', str);
-    converter.write(str);
-}
+text();
