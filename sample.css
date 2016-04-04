@@ -1,0 +1,13 @@
+@charset "Shift_JIS";
+
+body {
+    background: red;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+.‚»‚¤‚¾‚æ {
+	display: none;
+}
