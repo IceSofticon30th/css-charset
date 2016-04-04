@@ -37,6 +37,7 @@ function text() {
 }
 
 text();
+```
 <pre>
 write set
 write 	  	
