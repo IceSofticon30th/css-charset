@@ -1,6 +1,6 @@
 {
   "name": "css-charset",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A TransformStream that detects charset from http client response and CSS body, and converts to utf-8. Besides, replaces @charset [charset-strings] to @charset \"UTF-8\"",
   "main": "index.js",
   "dependencies": {
